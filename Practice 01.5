@@ -1,0 +1,37 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Choose an option:");
+        Console.WriteLine("A - Compute Area");
+        Console.WriteLine("P - Compute Perimeter");
+        Console.WriteLine("X - Exit");
+        Console.Write("Enter your choice: ");
+        char choice = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+
+        if (choice == 'A')
+        {
+            Console.Write("Enter radius: ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double area = Math.PI * radius * radius;
+            Console.WriteLine("Area = " + area);
+        }
+        else if (choice == 'P')
+        {
+            Console.Write("Enter radius: ");
+            double radius = Convert.ToDouble(Console.ReadLine());
+            double perimeter = 2 * Math.PI * radius;
+            Console.WriteLine("Perimeter = " + perimeter);
+        }
+        else if (choice == 'X')
+        {
+            Console.WriteLine("Exiting...");
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice.");
+        }
+    }
+}
